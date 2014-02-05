@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Rohit Javascript Test</title>
+<style type="text/css">
+div {
+	padding: 10px 50px;
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
+	function checkSeq(){
+		var input_Number = document.getElementById('input_Number').value;
+		var input_Sequence = document.getElementById('input_Sequence').value;
+		var splitNumbers=input_Sequence.split(' ');
+		var first=0;
+		var second=0;
+		for(var i=0;i<splitNumbers.length-1;i++){
+			first=0;
+			second=0;
+			first=parseInt(splitNumbers[i])+parseInt(input_Number);
+			second=parseInt(splitNumbers[i+1]);
+			if(first!=second){
+				alert(first);
+			}
+		}
+	}
+</script>
+</head>
+<body>
+<div>
+<div>Please enter value which will be multiplied in array:
+  <input type="text" id="input_Number" placeholder="eg. 10" />
+</div>
+<div>Please enter array of values (comma seperated):
+  <input type="text" id="input_Sequence" placeholder="10, 20, 30, 40" />
+</div>
+<div>
+  <button onclick="checkSeq()" >Click</button>
+</div>
+</body>
+</html>
